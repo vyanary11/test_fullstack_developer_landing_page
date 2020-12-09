@@ -72,7 +72,7 @@
                                 <li class="list-group-item @if($product->type=="best_seller") bg-primary text-white @endif">
                                     <del>Rp. {{ str_replace(",",".",number_format($product->price_discount)) }}</del></br>
                                     @php
-                                        $price = number_format($product->price_discount);
+                                        $price = number_format($product->price);
                                         $price_split = explode(",", $price);
                                     @endphp
                                     Rp <b style="font-size: 30px;">{{ $price_split[0] }}</b>
@@ -116,11 +116,7 @@
                             </tr>
                             <tr>
                                 <th><i class="fas fa-check-circle text-success"></th>
-                                <td class="text-center">max execution time 300s</td>
-                            </tr>
-                            <tr>
-                                <th><i class="fas fa-check-circle text-success"></th>
-                                <td class="text-center">max execution time 300s</td>
+                                <td class="text-center">php memory limit 1024 MB</td>
                             </tr>
                         </tbody>
                     </table>
@@ -130,19 +126,15 @@
                         <tbody>
                             <tr>
                                 <th><i class="fas fa-check-circle text-success"></th>
-                                <td class="text-center">max execution time 300s</td>
+                                <td class="text-center">post max size 128 MB</td>
                             </tr>
                             <tr>
                                 <th><i class="fas fa-check-circle text-success"></th>
-                                <td class="text-center">max execution time 300s</td>
+                                <td class="text-center">upload max filesize 128 MB</td>
                             </tr>
                             <tr>
                                 <th><i class="fas fa-check-circle text-success"></th>
-                                <td class="text-center">max execution time 300s</td>
-                            </tr>
-                            <tr>
-                                <th><i class="fas fa-check-circle text-success"></th>
-                                <td class="text-center">max execution time 300s</td>
+                                <td class="text-center">max input vars 2500</td>
                             </tr>
                         </tbody>
                     </table>
